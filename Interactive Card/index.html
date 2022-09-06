@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&family=Space+Mono:wght@700&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    <title>Interactive Card</title>
+</head>
+<body>
+    <main>
+        <section class="purple__bg">
+            <img src="./img/bg-main-desktop.png" alt="" class="main__bg"> 
+            <div class="front___back--cards">
+                <div class="front__card">
+                    <div class="font__icons">
+                        <svg width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff" />
+                            <path
+                                d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z"
+                                stroke="#fff" />
+                        </svg>
+                    </div>
+                    <div class="card__numbers">
+                        <p class="num" id="card__number">0000 0000 0000 0000</p>
+                        <div class="name__expiry--date">
+                            <p id="cardholder__name">JANE APPLESEED</p>
+                            <div id="expiry__date">
+                                <span id="month">00</span> / 
+                                <span id="year">00</span>    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back__card">
+                    <div class="black__line"></div>
+                    <div class="cvc" id="cvc__number">000</div>
+                    <div class="lines first">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                        <div class="line4"></div>
+                    </div>
+                    <div class="lines">
+                        <div class="line2"></div>
+                        <div class="line1"></div>
+                        <div class="line3"></div>
+                        <div class="line4"></div>
+                    </div>
+                    <div class="lines third">
+                        <div class="line4"></div>
+                        <div class="line2"></div>
+                        <div class="line1"></div>
+                        <div class="line3"></div>
+                    </div>
+            </div>
+        </section>
+
+
+        <section class="white__bg">
+            <div class="users__info">
+                <div class="cardholder__name">
+                    <label for="name">CARDHOLDER NAME</label>
+                    <input type="text" required placeholder="e.g. Jane   Appleseed" class="name__input" >
+                    <p id="error"></p>
+                    <span id="spanResultName">
+
+                    </span>
+                </div>
+                <div class="card__number">
+                    <label for="number">CARD NUMBER</label>
+                    <input type="text" placeholder="e.g. 1234 5678 9123 0000" maxlength="19" class="number__input" required>
+                    <p id="error2"></p>
+                    <span id="spanResultNumber">
+                    
+                    </span>
+                </div>
+                <div class="date__and--cvc">    
+                    <div class="expiry__date">
+                        <label for="date">EXP.DATE (MM/YY)</    label>
+                        <div class="mm__yy">
+                            <input type="number" placeholder="MM" maxlength="2" class="month__input" required>
+                            <p id="error3"></p>
+                            <span id="spanResultMonth">
+                            
+                            </span>
+                            <input type="number"    placeholder="YY" maxlength="4" class="year__input" required>
+                            <p id="error4"></p>
+                            <span id="spanResultYear">
+                            
+                            </span>
+                        </div>
+                    </div>
+                    <div class="cvc">
+                        <label for="cvc">CVC</label>
+                        <input type="number" placeholder="e.g.  123" class="cvc__input" required maxlength="3">
+                        <p id="error5"></p>
+                        <span id="spanResultCvc">
+                        
+                        </span>
+                    </div>
+                </div>
+                <button class="button" onclick="getData()">Confirm</button>
+                <span id="spanResultName">
+                    
+                </span>
+            </div>    
+        </section>
+    </main>
+</body>
+</html>
+
+
+
+

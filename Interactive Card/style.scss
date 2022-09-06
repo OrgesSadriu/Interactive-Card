@@ -1,0 +1,433 @@
+//Colors
+$Linear : hsl(249, 99%, 64%); //to 
+$Gradient:hsl(278, 94%, 30%); //(active input border)
+$Red : hsl(0, 100%, 66%);   //(input errors)
+$White: hsl(0, 0%, 100%);  
+$LightGrayishViolet: hsl(270, 3%, 87%); 
+$DarkGrayishViolet: hsl(279, 6%, 55%);
+$VeryDarkViolet: hsl(278, 68%, 11%);
+
+//Typography
+$FontSize : 18px;
+$FontFamily: 'Space Grotesk',sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    font-size: $FontSize;
+    font-family: $FontFamily;
+}
+main {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+}
+.purple__bg {
+    display: flex;
+    .main__bg {
+        height: 100vh;
+    }
+    .front__card {
+        color: $White;
+        width: 400px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 75px;
+        border-radius: 10px;
+        background: linear-gradient(to bottom right,$Linear,$Gradient);
+        border: none;
+        padding: 30px;
+        margin-left: -320px;
+        margin-top: 110px;
+        .card__numbers {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            .num {
+                font-size: 36px;
+            }
+            .name__expiry--date {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+    .back__card {
+        background: $LightGrayishViolet;
+        width: 445px;
+        height: 245px;
+        display: flex;
+        flex-direction: column;
+        border: none;
+        display: flex;
+        gap: 30px;
+        border-radius: 10px;
+        margin-left: -200px;
+        margin-top: 50px;
+        .black__line {
+            background: rgb(24, 23, 23);
+            width: 100%;
+            height: 50px;
+            margin-top: 30px;
+        }
+        .cvc {
+            height: 35px;
+            background: $DarkGrayishViolet;
+            border: none;
+            border-radius: 4px;
+            text-align: right;
+            margin: 0 40px;
+            padding-top: 11px;
+            padding-right: 7px;
+            color: $White;
+            font-size: 18px;
+            &::placeholder {
+                color: $White;
+                text-align: right;
+            }
+        }
+        .lines {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3px;
+            margin-top: -23px;
+            .line1 {
+                width: 100px;
+                height: 3px;
+                background: $DarkGrayishViolet;
+                border-radius: 15px;
+            }
+            .line2 {
+                width: 30px;
+                height: 3px;
+                background: $DarkGrayishViolet;
+                border-radius: 15px;
+            }
+            .line3 {
+                width: 30px;
+                height: 3px;
+                background: $DarkGrayishViolet;
+                border-radius: 15px;
+            }
+            .line4 {
+                width: 5px;
+                height: 3px;
+                background: $DarkGrayishViolet;
+                border-radius: 15px;
+            }
+        }
+        .first {
+            margin-top: 1px;
+        }
+    }
+}
+
+.white__bg {
+    width: 70%;
+    height: 100%;
+    background: $White;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.users__info {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: -15%;
+    gap: 20px;
+    .cardholder__name {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        input {
+            padding: 10px;
+            width: 450px;
+            font-size: 17px;
+            border: 1px solid $DarkGrayishViolet;
+            border-radius: 7px;
+        }
+    }
+    .card__number {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        input {
+            padding: 10px;
+            width: 450px;
+            font-size: 17px;
+            border: 1px solid $DarkGrayishViolet;
+            border-radius: 7px;
+            }
+    }
+    .date__and--cvc {
+        display: flex;
+        gap: 30px;
+    }
+    .expiry__date {
+        display: flex;
+        input {
+            padding: 10px;
+            width: 75px;
+            font-size: 17px;
+            border: 1px solid $DarkGrayishViolet;
+            border-radius: 7px;
+        }
+    }
+    .mm__yy {
+        display: flex;
+        gap: 10px;
+        margin-top: 5px;
+    }
+    .cvc {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        input {
+            padding: 10px;
+            width: 200px;
+            font-size: 17px;
+            border: 1px solid $DarkGrayishViolet;
+            border-radius: 7px;
+        }
+    }
+    button {
+        background: $VeryDarkViolet;
+        color: $White;
+        font-size: $FontSize;
+        padding: 10px 202px;
+        border: none;
+        border-radius: 7px;
+        &:hover {
+            background: $Gradient;
+            transition: 0.15s;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width:450px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    .purple__bg {
+        background: $VeryDarkViolet;
+        .main__bg {
+            display: none;
+        }
+        .front__card {
+            width: 290px;
+            height: 130px;
+            margin-left: 15px;
+            padding: 30px;
+            gap: 30px;
+            margin-top: 161px;
+            position: absolute;
+            float: inline-end;
+            .card__numbers {
+            .num {
+                    font-size: 25px;
+                }
+            }
+        }
+        .back__card{
+            width: 350px;
+            height: 185px;
+            margin-left: 75px;
+            margin-bottom: 20px;
+            .cvc {
+                height: 75px;
+            }
+            .third {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .white__bg {
+        width: 100%;
+        .users__info {
+            margin-top: 150px;
+            margin-left: -30px;
+        }
+        .cardholder__name {
+            input {
+                width: 340px;
+            }
+        }
+        .card__number {
+            input {
+                width: 340px;
+            }
+        }
+        .date__and--cvc {
+            width:200px;
+            margin-left: -160px;
+            .expiry__date {
+                input {
+                    width: 55px;
+
+                }
+            }
+        }
+        .cvc {
+            input {
+                width: 122px;
+            }
+        }
+        button {
+            padding: 10px 148px;
+            margin-bottom: 40px;
+        
+        }
+    }
+
+}
+@media (max-width:425px) {
+    .purple__bg {
+    .front__card {
+            width: 240px;
+            height: 100px;
+            gap: 25px;
+            .font__icons {
+                margin-top: -15px;
+            }    
+            .card__numbers {
+                .num {
+                    font-size: 21px;
+                }
+                #cardholder__name {
+                    font-size: 14px;
+                }
+                #expiry__date {
+                    font-size: 14px;
+                }
+            }
+        }
+        .back__card {
+            width: 300px;
+            height: 155px;
+            gap: 20px;
+            .cvc {
+                height: 50px;
+            }
+        }
+    }
+}
+@media (max-width:390px) {
+    .white__bg {
+        width: 100%;    
+            .users__info {
+                margin-left: -50px;
+            }
+            .cardholder__name {
+                input {
+                    width: 280px;
+                }
+            }
+    
+            .card__number {
+                input {
+                    width: 280px;
+                }
+            }
+            .date__and--cvc {
+                width: 200px;
+                margin-left: -110px;
+                gap: 25px;
+                .expiry__date {
+                    input {
+                        width: 45px;
+                    }
+                }
+            }
+            .cvc {
+                input {
+                    width: 95px;
+                }
+            }
+            button {
+                padding: 10px 123px;
+            }
+        }
+}
+@media (max-width:375px) {
+    .purple__bg {
+            .front__card {
+                width: 220px;
+                height: 100px;    
+                .card__numbers {
+                    .num {
+                        font-size: 19px;
+                    }
+                }
+            }
+            .back__card {
+                width: 280px;
+                height: 155px;    
+            }
+        }
+}
+@media (max-width:355px) {
+    .purple__bg {
+            .front__card {
+                width: 230px;
+                height: 100px;
+                margin-left: 35px;
+                .card__numbers {
+                    .num {
+                        font-size: 18px;
+                    }
+                }
+            }
+            .back__card {
+                width: 265px;
+                height: 155px;
+            }
+        }
+                .white__bg {
+                    width: 100%;
+                    .users__info {
+                        margin-left: -50px;
+                    }
+                    .cardholder__name {
+                        input {
+                            width: 250px;
+                        }
+                    }
+                    .card__number {
+                        input {
+                            width: 250px;
+                        }
+                    }
+                    .date__and--cvc {
+                        width: 200px;
+                        margin-left: -70px;
+                        gap: 10px;
+                        .expiry__date {
+                            input {
+                                width: 43px;
+                            }
+                        }
+                    }
+                    .cvc {
+                        input {
+                            width: 80px;
+                        }
+                    }
+                    button {
+                        padding: 10px 103px;
+                    }
+                }
+    }

@@ -1,0 +1,390 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+}
+
+.purple__bg {
+  display: flex;
+}
+.purple__bg .main__bg {
+  height: 100vh;
+}
+.purple__bg .front__card {
+  color: hsl(0deg, 0%, 100%);
+  width: 400px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 75px;
+  border-radius: 10px;
+  background: linear-gradient(to bottom right, hsl(249deg, 99%, 64%), hsl(278deg, 94%, 30%));
+  border: none;
+  padding: 30px;
+  margin-left: -320px;
+  margin-top: 110px;
+}
+.purple__bg .front__card .card__numbers {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.purple__bg .front__card .card__numbers .num {
+  font-size: 36px;
+}
+.purple__bg .front__card .card__numbers .name__expiry--date {
+  display: flex;
+  justify-content: space-between;
+}
+.purple__bg .back__card {
+  background: hsl(270deg, 3%, 87%);
+  width: 445px;
+  height: 245px;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  display: flex;
+  gap: 30px;
+  border-radius: 10px;
+  margin-left: -200px;
+  margin-top: 50px;
+}
+.purple__bg .back__card .black__line {
+  background: rgb(24, 23, 23);
+  width: 100%;
+  height: 50px;
+  margin-top: 30px;
+}
+.purple__bg .back__card .cvc {
+  height: 35px;
+  background: hsl(279deg, 6%, 55%);
+  border: none;
+  border-radius: 4px;
+  text-align: right;
+  margin: 0 40px;
+  padding-top: 11px;
+  padding-right: 7px;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 18px;
+}
+.purple__bg .back__card .cvc::-moz-placeholder {
+  color: hsl(0deg, 0%, 100%);
+  text-align: right;
+}
+.purple__bg .back__card .cvc:-ms-input-placeholder {
+  color: hsl(0deg, 0%, 100%);
+  text-align: right;
+}
+.purple__bg .back__card .cvc::placeholder {
+  color: hsl(0deg, 0%, 100%);
+  text-align: right;
+}
+.purple__bg .back__card .lines {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  margin-top: -23px;
+}
+.purple__bg .back__card .lines .line1 {
+  width: 100px;
+  height: 3px;
+  background: hsl(279deg, 6%, 55%);
+  border-radius: 15px;
+}
+.purple__bg .back__card .lines .line2 {
+  width: 30px;
+  height: 3px;
+  background: hsl(279deg, 6%, 55%);
+  border-radius: 15px;
+}
+.purple__bg .back__card .lines .line3 {
+  width: 30px;
+  height: 3px;
+  background: hsl(279deg, 6%, 55%);
+  border-radius: 15px;
+}
+.purple__bg .back__card .lines .line4 {
+  width: 5px;
+  height: 3px;
+  background: hsl(279deg, 6%, 55%);
+  border-radius: 15px;
+}
+.purple__bg .back__card .first {
+  margin-top: 1px;
+}
+
+.white__bg {
+  width: 70%;
+  height: 100%;
+  background: hsl(0deg, 0%, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.users__info {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: -15%;
+  gap: 20px;
+}
+.users__info .cardholder__name {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.users__info .cardholder__name input {
+  padding: 10px;
+  width: 450px;
+  font-size: 17px;
+  border: 1px solid hsl(279deg, 6%, 55%);
+  border-radius: 7px;
+}
+.users__info .card__number {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.users__info .card__number input {
+  padding: 10px;
+  width: 450px;
+  font-size: 17px;
+  border: 1px solid hsl(279deg, 6%, 55%);
+  border-radius: 7px;
+}
+.users__info .date__and--cvc {
+  display: flex;
+  gap: 30px;
+}
+.users__info .expiry__date {
+  display: flex;
+}
+.users__info .expiry__date input {
+  padding: 10px;
+  width: 75px;
+  font-size: 17px;
+  border: 1px solid hsl(279deg, 6%, 55%);
+  border-radius: 7px;
+}
+.users__info .mm__yy {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+.users__info .cvc {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.users__info .cvc input {
+  padding: 10px;
+  width: 200px;
+  font-size: 17px;
+  border: 1px solid hsl(279deg, 6%, 55%);
+  border-radius: 7px;
+}
+.users__info button {
+  background: hsl(278deg, 68%, 11%);
+  color: hsl(0deg, 0%, 100%);
+  font-size: 18px;
+  padding: 10px 202px;
+  border: none;
+  border-radius: 7px;
+}
+.users__info button:hover {
+  background: hsl(278deg, 94%, 30%);
+  transition: 0.15s;
+  cursor: pointer;
+}
+
+@media (max-width: 450px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  .purple__bg {
+    background: hsl(278deg, 68%, 11%);
+  }
+  .purple__bg .main__bg {
+    display: none;
+  }
+  .purple__bg .front__card {
+    width: 290px;
+    height: 130px;
+    margin-left: 15px;
+    padding: 30px;
+    gap: 30px;
+    margin-top: 161px;
+    position: absolute;
+    float: inline-end;
+  }
+  .purple__bg .front__card .card__numbers .num {
+    font-size: 25px;
+  }
+  .purple__bg .back__card {
+    width: 350px;
+    height: 185px;
+    margin-left: 75px;
+    margin-bottom: 20px;
+  }
+  .purple__bg .back__card .cvc {
+    height: 75px;
+  }
+  .purple__bg .back__card .third {
+    margin-bottom: 20px;
+  }
+  .white__bg {
+    width: 100%;
+  }
+  .white__bg .users__info {
+    margin-top: 150px;
+    margin-left: -30px;
+  }
+  .white__bg .cardholder__name input {
+    width: 340px;
+  }
+  .white__bg .card__number input {
+    width: 340px;
+  }
+  .white__bg .date__and--cvc {
+    width: 200px;
+    margin-left: -160px;
+  }
+  .white__bg .date__and--cvc .expiry__date input {
+    width: 55px;
+  }
+  .white__bg .cvc input {
+    width: 122px;
+  }
+  .white__bg button {
+    padding: 10px 148px;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 425px) {
+  .purple__bg .front__card {
+    width: 240px;
+    height: 100px;
+    gap: 25px;
+  }
+  .purple__bg .front__card .font__icons {
+    margin-top: -15px;
+  }
+  .purple__bg .front__card .card__numbers .num {
+    font-size: 21px;
+  }
+  .purple__bg .front__card .card__numbers #cardholder__name {
+    font-size: 14px;
+  }
+  .purple__bg .front__card .card__numbers #expiry__date {
+    font-size: 14px;
+  }
+  .purple__bg .back__card {
+    width: 300px;
+    height: 155px;
+    gap: 20px;
+  }
+  .purple__bg .back__card .cvc {
+    height: 50px;
+  }
+}
+@media (max-width: 390px) {
+  .white__bg {
+    width: 100%;
+  }
+  .white__bg .users__info {
+    margin-left: -50px;
+  }
+  .white__bg .cardholder__name input {
+    width: 280px;
+  }
+  .white__bg .card__number input {
+    width: 280px;
+  }
+  .white__bg .date__and--cvc {
+    width: 200px;
+    margin-left: -110px;
+    gap: 25px;
+  }
+  .white__bg .date__and--cvc .expiry__date input {
+    width: 45px;
+  }
+  .white__bg .cvc input {
+    width: 95px;
+  }
+  .white__bg button {
+    padding: 10px 123px;
+  }
+}
+@media (max-width: 375px) {
+  .purple__bg .front__card {
+    width: 220px;
+    height: 100px;
+  }
+  .purple__bg .front__card .card__numbers .num {
+    font-size: 19px;
+  }
+  .purple__bg .back__card {
+    width: 280px;
+    height: 155px;
+  }
+}
+@media (max-width: 355px) {
+  .purple__bg .front__card {
+    width: 230px;
+    height: 100px;
+    margin-left: 35px;
+  }
+  .purple__bg .front__card .card__numbers .num {
+    font-size: 18px;
+  }
+  .purple__bg .back__card {
+    width: 265px;
+    height: 155px;
+  }
+  .white__bg {
+    width: 100%;
+  }
+  .white__bg .users__info {
+    margin-left: -50px;
+  }
+  .white__bg .cardholder__name input {
+    width: 250px;
+  }
+  .white__bg .card__number input {
+    width: 250px;
+  }
+  .white__bg .date__and--cvc {
+    width: 200px;
+    margin-left: -70px;
+    gap: 10px;
+  }
+  .white__bg .date__and--cvc .expiry__date input {
+    width: 43px;
+  }
+  .white__bg .cvc input {
+    width: 80px;
+  }
+  .white__bg button {
+    padding: 10px 103px;
+  }
+}/*# sourceMappingURL=style.css.map */
